@@ -15,7 +15,6 @@ with conn.cursor() as  cur:
 
 
 def create_db(conn):
-    with conn.cursor() as  cur:
     cur.execute("""
         create table if not exists course(
            # прописываем поля таблицы и их ограничения
@@ -27,7 +26,6 @@ def create_db(conn):
 
 
 def add_client(conn):
-    with conn.cursor() as  cur:
     cur.execute("""
         insert into sql_from_python(last_name, first_name, email, phone=None) values ();
         """)
@@ -35,7 +33,6 @@ def add_client(conn):
             
     
 def add_phone(conn):
-    with conn.cursor() as  cur:
     cur.execute("""
         insert into sql_from_python(id, phone) values ();
         """)
@@ -43,7 +40,6 @@ def add_phone(conn):
 
 
 def change_client(conn):
-    with conn.cursor() as  cur:
     cur.execute("""
         update sql_from_python set # прописываем знчения,которые нужно изменить
         where id = ;
@@ -52,7 +48,6 @@ def change_client(conn):
 
 
 def delete_phone(conn):
-    with conn.cursor() as  cur:
     cur.execute("""
         delete from sql_from_python
         where client_id = , phone = none;
@@ -60,7 +55,6 @@ def delete_phone(conn):
     conn.commit()
 
 def delete_client(conn):
-    with conn.cursor() as  cur:
     cur.execute("""
         delete from sql_from_python
         where id = ;
@@ -69,7 +63,6 @@ def delete_client(conn):
 
 
 def find_client(conn):
-    with conn.cursor() as  cur:
     cur.execute("""
        select last_name = , first_name =, email = , phone=None from sql_from_python;
         """)
